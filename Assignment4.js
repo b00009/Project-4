@@ -68,11 +68,27 @@ var numberCheck = function (number) {
 
 }
 
+// Find the total value of just the numbers in an array, even if some of the items are not number
+var totalArrayNums = function (array) {
 
+	var total = 0;
 
+	for (var i = 0; i < array.length; i++) {
+		Na = parseFloat(array[i]);
+		if (!isNaN(Na))
+		{
+		total += Na;
+		}
+	}
+	return total;
+}
 
+//Capitalize the first letter of each word
+var titleCase = function (sentance) {
 
-
+var titleCaseWord = []; 
+sentance = sentance.toLowercase();
+var newSentance = ""
 
 
 
@@ -99,3 +115,6 @@ console.log(findVal(array, 10));
 
 
 console.log(numberCheck("123-456-7890"));
+
+var array = [1, true, 3, [] , 5, false, 7];
+console.log(totalArrayNums(array));
