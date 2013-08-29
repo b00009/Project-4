@@ -55,9 +55,18 @@ var findVal = function (array, num) {
 }
 
 
+//Validate phone number
 
+var numberCheck = function (number) {
+	var phoneNum = "000-000-0000"
+		if (number.charAt(3) == "-" && number.charAt(7) == "-" && number.length == phoneNum.length) {
+			return ("This is a valid phone number");
+		}
+		else{
+			return ("This is not a valid number");
+		}
 
-
+}
 
 
 
@@ -87,3 +96,6 @@ console.log(checkEmail(email));
 
 var array = [12, 15, 7, 34, 22, 78];
 console.log(findVal(array, 10));
+
+
+console.log(numberCheck("123-456-7890"));
