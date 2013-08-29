@@ -87,10 +87,23 @@ var totalArrayNums = function (array) {
 var titleCase = function (sentance) {
 
 var titleCaseWord = []; 
-sentance = sentance.toLowercase();
-var newSentance = ""
+sentance = sentance.toLowerCase();
+var newSentance = "";
 
+for (var i = 0; i < sentance.length; i++) {
+	if (sentance.charAt(i) == " ") {
+	newSentance += sentance.charAt(i);
+	newSentance += sentance.charAt(i+1).toUpperCase();
+	i++;
+		} else {
+			newSentance += sentance.charAt(i);
+		}
+	}
+			
+newSentance = newSentance.slice(0,1).toUpperCase() + newSentance.slice(1);
 
+	return newSentance;
+}
 
 
 
@@ -118,3 +131,6 @@ console.log(numberCheck("123-456-7890"));
 
 var array = [1, true, 3, [] , 5, false, 7];
 console.log(totalArrayNums(array));
+
+var string = "hello My name is michael";
+console.log(titleCase(string));
