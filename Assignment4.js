@@ -107,10 +107,13 @@ newSentance = newSentance.slice(0,1).toUpperCase() + newSentance.slice(1);
 
 
 
+// for money: 2.1 -> 2.10
+var twoDecimalPlaces = function (num) {
+	return num.toFixed(2);
 
 
 
-
+}
 
 
 
@@ -134,3 +137,6 @@ console.log(totalArrayNums(array));
 
 var string = "hello My name is michael";
 console.log(titleCase(string));
+
+var money = 2.1;
+console.log(twoDecimalPlaces(money));
