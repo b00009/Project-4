@@ -115,7 +115,10 @@ var twoDecimalPlaces = function (num) {
 
 }
 
-
+// Given a string version of a number such as "42", return the value as an actual Number, such as 42.
+var makeNumber = function (string) {
+	return parseFloat(string);
+}
 
 
 
@@ -140,3 +143,6 @@ console.log(titleCase(string));
 
 var money = 2.1;
 console.log(twoDecimalPlaces(money));
+
+var string = "42";
+console.log(makeNumber(string));
